@@ -1,0 +1,19 @@
+@mixin flex {
+    display: flex;
+  }
+
+  
+@mixin flex-row {
+    @include flex;
+    flex-direction: row;
+  }
+  
+@mixin flex-column {
+    @include flex;
+    flex-direction: column;
+  }
+
+@mixin flex-basis($value) {
+    flex-basis: #{$value}#{"%"} !important;
+    max-width: #{$value}#{"%"} !important;
+  }
