@@ -9,3 +9,12 @@
     vertical-align: middle;
     // padding: 5%;
 }
+
+
+@media only screen and (max-width: 765px) {
+    
+    .products-wrapper{
+        @include flex-basis(100);  
+       
+    }
+      }

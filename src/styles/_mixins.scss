@@ -13,6 +13,11 @@
     flex-direction: column;
   }
 
+  @mixin flex-column-reverse {
+    @include flex;
+    flex-direction: column-reverse;
+  }
+
 @mixin flex-basis($value) {
     flex-basis: #{$value}#{"%"} !important;
     max-width: #{$value}#{"%"} !important;

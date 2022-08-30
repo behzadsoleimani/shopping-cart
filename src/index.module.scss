@@ -8,6 +8,20 @@
   }
 
   .basket {
-    @include flex-basis(30);
+    @include flex-basis(20);
+  }
+
+
+  
+
+  @media only screen and (max-width: 765px) {
+    
+.App {
+  @include flex-column-reverse;
+}
+
+.basket {
+  @include flex-basis(100);
+}
   }
   

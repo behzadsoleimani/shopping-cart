@@ -1,6 +1,7 @@
 @import "src/styles/mixins";
 
 .basket-content{
+  @include flex-column;
   @include flex-basis(20);
   justify-content: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.01);
@@ -8,11 +9,9 @@
   background-color: #fff;
   height: fit-content;
   align-items: flex-start;
-  display: flex;
-  flex-direction: column;
   padding: 2%;
     &--parent{
-      display: flex;
+      @include flex-row;
       margin: 2% 0;
       width: 100%;
       position: relative
@@ -66,3 +65,11 @@
 .basket-empty{
   align-items: center;
 }
+
+@media only screen and (max-width: 765px) {
+    
+  .basket-content{
+    @include flex-basis(80);
+    margin-bottom: 10%;
+  }
+    }
