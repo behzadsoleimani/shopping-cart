@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import classnames from "classnames/bind";
 import styles from "./index.module.scss";
 import { useStateValue } from "../../context/state";
-import { getLocalStorge } from "../../helpers/util-functions";
+import { convertToMinutes, getLocalStorge } from "../../helpers/util-functions";
 import Expire from "../expire";
 
 const cx = classnames.bind(styles);
@@ -36,7 +36,7 @@ export default function Basket() {
           })}>
             {cart.length ?
                 cart.map((c: any, index: number) => (
-                    <Expire delay={Number(c.orderLimitTime)}
+                    <Expire delay={convertToMinutes(Number(c.orderLimitTime))}
                     id={c.id}><div key={index} className={cx("basket-content--parent")} style={{
                         borderBottom: index === cart.length - 1 ? "none" : "1px solid #efefef",
                     }}>
