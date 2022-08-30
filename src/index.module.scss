@@ -1,0 +1,13 @@
+@import "src/styles/mixins";
+
+.App {
+    @include flex-row;
+    font-family: sans-serif;
+    justify-content: center;
+    padding: 4%
+  }
+
+  .basket {
+    @include flex-basis(30);
+  }
+  
