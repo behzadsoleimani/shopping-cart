@@ -1,0 +1,11 @@
+@import "src/styles/mixins";
+
+.products-wrapper{
+    @include flex-row;
+    @include flex-basis(80);  
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    // padding: 5%;
+}
